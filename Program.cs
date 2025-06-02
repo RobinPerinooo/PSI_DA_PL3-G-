@@ -17,6 +17,15 @@ namespace iTasks
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+<<<<<<< HEAD
+=======
+
+            //Criar na base de dados
+            using (var db = new frmGereUtilizadores())
+            {
+
+            }
+>>>>>>> a74d764 (Login)
         }
     }
 }
