@@ -19,3 +19,4 @@ C:\Users\Robin\Documents\Courses\2º Semetre\Desenvolvimento Aplicacoes\Projeto\
 C:\Users\Robin\Documents\Courses\2º Semetre\Desenvolvimento Aplicacoes\Projeto\bin\Debug\EntityFramework.xml
 C:\Users\Robin\Documents\Courses\2º Semetre\Desenvolvimento Aplicacoes\Projeto\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Robin\Documents\Courses\2º Semetre\Desenvolvimento Aplicacoes\Projeto\obj\Debug\iTasks.csproj.Up2Date
+C:\Users\Robin\Documents\Courses\2º Semetre\Desenvolvimento Aplicacoes\Projeto\obj\Debug\iTasks.frmRegister.resources

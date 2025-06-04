@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using iTasks.Models;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace iTasks
@@ -16,27 +11,18 @@ namespace iTasks
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmGereUtilizadores_Load(object sender, EventArgs e)
         {
-
-            if (SessaoAtual.UtilizadorLogado.Tipo == "Programador")
+           // Verifica se o utilizador logado é um Gestor
+            if (SessaoAtual.UtilizadorLogado == null || SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
             {
-                txtIdGestor.ReadOnly = true;
-                txtNomeGestor.ReadOnly = true;
-                txtUsernameGestor.ReadOnly = true;
-                txtPasswordGestor.ReadOnly = true;
-                cbDepartamento.Enabled = false;
-                chkGereUtilizadores.Enabled = false;
-                btGravarGestor.Enabled = false;
+                MessageBox.Show("Apenas os Gestores podem aceder a esta área!", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.BeginInvoke(new Action(() => this.Close())); // Fecha após mostrar mensagem
+                return;
             }
+
+
         }
 
         // Método para verificar se o Username já existe
@@ -91,8 +77,17 @@ namespace iTasks
             chkGereUtilizadores.Checked = false;
         }
 
-
         private void btGravarGestor_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btGravarProg_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btGravarGestor_Click_1(object sender, EventArgs e)
         {
             if (SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
             {
@@ -126,7 +121,7 @@ namespace iTasks
                     Username = username,
                     Password = txtPasswordGestor.Text,
                     Nome = txtNomeGestor.Text,
-                    Tipo = chkGereUtilizadores.Checked ? "Gestor" : "Programador"
+                    Tipo = "Gestor"
                 };
 
                 SessaoAtual.TodosUtilizadores.Add(novoUtilizador);
@@ -144,8 +139,60 @@ namespace iTasks
             AtualizarListas();
             LimparCampos();
 
+        }
+
+        private void lstListaProgramadores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
+            {
+                MessageBox.Show("Apenas gestores podem gravar dados.");
+                return;
+            }
+
+            string username = txtUsernameProg.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("O Username é obrigatório.");
+                return;
+            }
+
+            // Verifica se é novo ou edição
+            int.TryParse(txtIdProg.Text, out int id);
+            Utilizador existente = SessaoAtual.TodosUtilizadores.FirstOrDefault(u => u.Id == id);
+
+            if (existente == null)
+            {
+                if (UsernameExiste(username))
+                {
+                    MessageBox.Show("Username já existe.");
+                    return;
+                }
+
+                Utilizador novoUtilizador = new Utilizador
+                {
+                    Id = GerarNovoId(),
+                    Username = username,
+                    Password = txtPasswordProg.Text,
+                    Nome = txtNomeProg.Text,
+                    Tipo = "Programador"
+                };
+
+                SessaoAtual.TodosUtilizadores.Add(novoUtilizador);
+                MessageBox.Show("Utilizador criado com sucesso!");
+            }
+            else
+            {
+                existente.Username = username;
+                existente.Password = txtPasswordProg.Text;
+                existente.Nome = txtNomeProg.Text;
+                existente.Tipo = "Programador";
+                MessageBox.Show("Utilizador atualizado com sucesso!");
+            }
+
+            AtualizarListas();
+            LimparCampos();
 
         }
->>>>>>> a74d764 (Login)
     }
 }

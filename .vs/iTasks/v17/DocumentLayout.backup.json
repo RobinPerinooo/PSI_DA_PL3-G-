@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmGereUtilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmGereUtilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\models\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:models\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmgereutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmkanban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmkanban.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmLogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmKanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmKanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\models\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:models\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmconsultartarefasconcluidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmconsultartarefasconcluidas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\robin\\documents\\courses\\2\u00BA semetre\\desenvolvimento aplicacoes\\projeto\\views\\frmgeretipostarefas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:views\\frmgeretipostarefas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,8 +54,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -54,104 +70,145 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmGereUtilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmGereUtilizadores.cs",
-              "RelativeDocumentMoniker": "frmGereUtilizadores.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmGereUtilizadores.cs",
-              "RelativeToolTip": "frmGereUtilizadores.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAIwFoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T10:38:37.244Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmGereUtilizadores.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmGereUtilizadores.cs",
-              "RelativeDocumentMoniker": "frmGereUtilizadores.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmGereUtilizadores.cs [Design]",
-              "RelativeToolTip": "frmGereUtilizadores.cs [Design]",
+              "Title": "frmGereUtilizadores.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereUtilizadores.cs",
+              "RelativeDocumentMoniker": "Views\\frmGereUtilizadores.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereUtilizadores.cs",
+              "RelativeToolTip": "Views\\frmGereUtilizadores.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAuwLEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T10:33:06.295Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Utilizador.cs",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Utilizador.cs",
-              "RelativeDocumentMoniker": "Utilizador.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Utilizador.cs",
-              "RelativeToolTip": "Utilizador.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T10:22:42.865Z",
+              "WhenOpened": "2025-06-04T10:55:35.781Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T09:18:51.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmKanban.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmKanban.cs",
-              "RelativeDocumentMoniker": "frmKanban.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmKanban.cs [Design]",
-              "RelativeToolTip": "frmKanban.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T11:43:26.908Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmLogin.cs",
-              "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmLogin.cs",
-              "RelativeToolTip": "frmLogin.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAArwDEAAABLAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Views\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.cs",
+              "RelativeToolTip": "Views\\frmLogin.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAMwEIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T09:34:46.066Z",
+              "WhenOpened": "2025-06-04T10:52:43.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Programador.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Models\\Programador.cs",
+              "RelativeDocumentMoniker": "Models\\Programador.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Models\\Programador.cs*",
+              "RelativeToolTip": "Models\\Programador.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:51:35.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gestor.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Models\\Gestor.cs",
+              "RelativeDocumentMoniker": "Models\\Gestor.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Models\\Gestor.cs",
+              "RelativeToolTip": "Models\\Gestor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:50:39.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "frmKanban.cs",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmKanban.cs",
-              "RelativeDocumentMoniker": "frmKanban.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmKanban.cs",
-              "RelativeToolTip": "frmKanban.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBQAAAAlAAAAAAAAAA==",
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Views\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.cs [Design]",
+              "RelativeToolTip": "Views\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T11:43:35.118Z"
+              "WhenOpened": "2025-06-04T10:46:11.784Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmLogin.cs",
-              "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\frmLogin.cs [Design]",
-              "RelativeToolTip": "frmLogin.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmLogin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\frmLogin.Designer.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmLogin.Designer.cs*",
+              "RelativeToolTip": "Views\\frmLogin.Designer.cs*",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAwwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T09:10:03.95Z",
+              "WhenOpened": "2025-06-04T10:46:05.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmConsultarTarefasConcluidas.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmConsultarTarefasConcluidas.cs",
+              "RelativeDocumentMoniker": "Views\\frmConsultarTarefasConcluidas.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmConsultarTarefasConcluidas.cs",
+              "RelativeToolTip": "Views\\frmConsultarTarefasConcluidas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:39:45.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmKanban.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmKanban.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\frmKanban.Designer.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmKanban.Designer.cs",
+              "RelativeToolTip": "Views\\frmKanban.Designer.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAwwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:38:41.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmGereTiposTarefas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereTiposTarefas.cs",
+              "RelativeDocumentMoniker": "Views\\frmGereTiposTarefas.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereTiposTarefas.cs [Design]",
+              "RelativeToolTip": "Views\\frmGereTiposTarefas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:33:47.362Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmKanban.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmKanban.cs",
+              "RelativeDocumentMoniker": "Views\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmKanban.cs [Design]",
+              "RelativeToolTip": "Views\\frmKanban.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:33:45.94Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmGereUtilizadores.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereUtilizadores.cs",
+              "RelativeDocumentMoniker": "Views\\frmGereUtilizadores.cs",
+              "ToolTip": "C:\\Users\\Robin\\Documents\\Courses\\2\u00BA Semetre\\Desenvolvimento Aplicacoes\\Projeto\\Views\\frmGereUtilizadores.cs [Design]",
+              "RelativeToolTip": "Views\\frmGereUtilizadores.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:33:40.369Z",
               "EditorCaption": " [Design]"
             }
           ]
