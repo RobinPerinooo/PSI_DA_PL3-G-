@@ -74,7 +74,7 @@
             this.btGravarGestor.TabIndex = 37;
             this.btGravarGestor.Text = "Gravar Dados";
             this.btGravarGestor.UseVisualStyleBackColor = true;
-            this.btGravarGestor.Click += new System.EventHandler(this.btGravarGestor_Click_1);
+            this.btGravarGestor.Click += new System.EventHandler(this.btGravarGestor_Click);
             // 
             // txtNomeGestor
             // 
@@ -197,6 +197,7 @@
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(267, 24);
             this.cbDepartamento.TabIndex = 41;
+            this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -358,7 +359,6 @@
             this.lstListaProgramadores.Name = "lstListaProgramadores";
             this.lstListaProgramadores.Size = new System.Drawing.Size(357, 537);
             this.lstListaProgramadores.TabIndex = 0;
-            this.lstListaProgramadores.SelectedIndexChanged += new System.EventHandler(this.lstListaProgramadores_SelectedIndexChanged);
             // 
             // txtIdProg
             // 

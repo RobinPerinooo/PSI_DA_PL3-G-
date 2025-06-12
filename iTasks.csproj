@@ -57,8 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItasksContext.cs" />
     <Compile Include="Models\Gestor.cs" />
     <Compile Include="Models\Programador.cs" />
+    <Compile Include="Models\Projeto.cs" />
+    <Compile Include="Models\Sessao.cs" />
+    <Compile Include="Models\Tarefa.cs" />
+    <Compile Include="Models\TipoTarefa.cs" />
     <Compile Include="Views\frmConsultarTarefasConcluidas.cs">
       <SubType>Form</SubType>
     </Compile>

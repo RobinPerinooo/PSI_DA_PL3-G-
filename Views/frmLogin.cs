@@ -7,10 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
-using System.Data.SqlClient;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace iTasks
 {
@@ -21,50 +18,43 @@ namespace iTasks
             InitializeComponent();
         }
 
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            using (var db = new ItasksContext())
+            {
+                var utilizador = db.Utilizadores
+                    .FirstOrDefault(u => u.Username == username);
+
+                if (utilizador == null)
+                {
+                    MessageBox.Show("Utilizador não encontrado.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (utilizador.Password != password)
+                {
+                    MessageBox.Show("Password incorreta.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Login com sucesso
+                MessageBox.Show($"Bem-vindo, {utilizador.Username}!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Session.NomeUtilizador = utilizador.Username;  // guardar o nome do utilizador logado
+                frmKanban kanban = new frmKanban(utilizador);            // abrir o formulário Kanban
+                kanban.Show();
+                this.Hide();                                    // esconder o formulário de login
+
+            }
+        }
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
-        }
-
-     
-
-    
-     
-
-        private void btLogin_Click(object sender, EventArgs e)
-        {
-            List<Utilizador> utilizadores = new List<Utilizador>
-            {
-                new Utilizador { Username = "test1", Password = "123", Tipo = "Programador"},
-                new Utilizador {Username = "test2", Password = "123", Tipo = "Gestor"}
-            };
-
-            var user = utilizadores.FirstOrDefault(u => u.Username == txtUsername.Text && u.Password == txtPassword.Text);
-            if (user != null)
-            {
-                SessaoAtual.UtilizadorLogado = user;
-                this.Hide();
-                frmKanban kanban = new frmKanban(user.Username, user.Tipo);
-                kanban.Show();
-            }
-            else
-            {
-                MessageBox.Show("Login inválido");
-            }
-        }
-
-        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxShowPassword.Checked)
-            {
-                txtPassword.PasswordChar = '\0';
-
-            }
-            else
-            {
-                txtPassword.PasswordChar = '•';
-
-            }
         }
     }
 }

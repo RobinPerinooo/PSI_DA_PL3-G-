@@ -1,198 +1,209 @@
-﻿using iTasks.Models;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace iTasks
 {
     public partial class frmGereUtilizadores : Form
     {
-        public frmGereUtilizadores()
+        private Utilizador _utilizador;
+
+        private List<int> idsUsados = new List<int>();
+        public frmGereUtilizadores(Utilizador utilizador)
         {
             InitializeComponent();
+            _utilizador = utilizador;
         }
 
         private void frmGereUtilizadores_Load(object sender, EventArgs e)
         {
-           // Verifica se o utilizador logado é um Gestor
-            if (SessaoAtual.UtilizadorLogado == null || SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
+            cbDepartamento.Items.Clear();
+            cbDepartamento.Items.Add("IT");
+            cbDepartamento.Items.Add("Marketing");
+            cbDepartamento.Items.Add("Administração");
+
+            // Opcional: seleciona um item por padrão
+            cbDepartamento.SelectedIndex = 0;
+            CarregarListaGestores();
+
+
+        }
+
+        private void CarregarListaGestores()
+        {
+            lstListaGestores.Items.Clear();
+
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=iTasksDB;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Apenas os Gestores podem aceder a esta área!", "Acesso Negado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.BeginInvoke(new Action(() => this.Close())); // Fecha após mostrar mensagem
+                string query = "SELECT Id, Nome, Username, Departamento FROM Utilizadors WHERE Tipo = '1'";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string nome = reader.IsDBNull(1) ? "N/A" : reader.GetString(1);
+                        string username = reader.GetString(2);
+                        int departamentoId = reader.GetInt32(3);
+                        string departamento = ((Departamento)departamentoId).ToString();
+
+                        lstListaGestores.Items.Add($"ID: {id}");
+                        lstListaGestores.Items.Add($"Nome: {nome}");
+                        lstListaGestores.Items.Add($"Username: {username}");
+                        lstListaGestores.Items.Add($"Departamento: {departamento}");
+                        lstListaGestores.Items.Add("_______________________________________________________");
+                        lstListaGestores.Items.Add("");
+                    }
+
+                    connection.Close();
+                }
+            }
+        }
+
+
+        private void btGravarGestor_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeGestor.Text.Trim();
+            string username = txtUsernameGestor.Text.Trim();
+            string password = txtPasswordGestor.Text.Trim();
+            string departamento = cbDepartamento.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(departamento))
+            {
+                MessageBox.Show("Preencha todos os campos (exceto ID, que é automático).", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
 
-        }
-
-        // Método para verificar se o Username já existe
-        private bool UsernameExiste(string username)
-        {
-            username = username.Trim().ToLower();
-
-            foreach (var item in lstListaGestores.Items)
+            int novoId = 1;
+            while (idsUsados.Contains(novoId))
             {
-                if (item is Utilizador gestor && gestor.Username.ToLower() == username)
-                    return true;
+                novoId++;
             }
 
-            foreach (var item in lstListaProgramadores.Items)
+
+            idsUsados.Add(novoId);
+
+
+            txtIdGestor.Text = novoId.ToString();
+
+
+            lstListaGestores.Items.Add($"ID: {novoId}");
+            lstListaGestores.Items.Add($"Nome: {nome}");
+            lstListaGestores.Items.Add($"Username: {username}");
+            lstListaGestores.Items.Add($"Departamento: {departamento}");
+            lstListaGestores.Items.Add("_______________________________________________________");
+            lstListaGestores.Items.Add("");
+
+
+
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=iTasksDB;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                if (item is Utilizador programador && programador.Username.ToLower() == username)
-                    return true;
+                string query = "INSERT INTO Utilizadors (Nome, Username, Password, Tipo, Departamento, Nivel) VALUES (@Nome, @Username, @Password, @Tipo, @Departamento, @Nivel)";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Id", novoId);
+                    cmd.Parameters.AddWithValue("@Nome", nome);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Tipo", (int)TipoUtilizador.Gestor);
+                    cmd.Parameters.AddWithValue("@Departamento", (int)Enum.Parse(typeof(Departamento), departamento));
+                    cmd.Parameters.AddWithValue("@Nivel", (int)TipoUtilizador.Gestor);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+
+                    connection.Close();
+                    CarregarListaGestores();
+
+                }
             }
 
-            return false;
-        }
-
-        private int GerarNovoId()
-        {
-            return SessaoAtual.TodosUtilizadores.Count > 0
-                ? SessaoAtual.TodosUtilizadores.Max(u => u.Id) + 1
-                : 1;
-        }
-
-
-        private void AtualizarListas()
-        {
-            lstListaGestores.Items.Clear();
-            lstListaProgramadores.Items.Clear();
-
-            foreach (var user in SessaoAtual.TodosUtilizadores)
-            {
-                if (user.Tipo == "Gestor")
-                    lstListaGestores.Items.Add(user);
-                else
-                    lstListaProgramadores.Items.Add(user);
-            }
-        }
-
-
-        private void LimparCampos()
-        {
+            // Limpa os campos para nova entrada
             txtIdGestor.Clear();
             txtNomeGestor.Clear();
             txtUsernameGestor.Clear();
-            txtPasswordGestor.Clear();
-            chkGereUtilizadores.Checked = false;
+            cbDepartamento.SelectedIndex = -1;
         }
 
-        private void btGravarGestor_Click(object sender, EventArgs e)
+        private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btGravarProg_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btGravarGestor_Click_1(object sender, EventArgs e)
-        {
-            if (SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
-            {
-                MessageBox.Show("Apenas gestores podem gravar dados.");
-                return;
-            }
-
+            string nome = txtNomeGestor.Text.Trim();
             string username = txtUsernameGestor.Text.Trim();
+            string password = txtPasswordGestor.Text.Trim();
+            string nivelexperiencia = cbNivelProg.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(username))
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(nivelexperiencia) || cbGestorProg.SelectedItem == null)
             {
-                MessageBox.Show("O Username é obrigatório.");
+                MessageBox.Show("Preencha todos os campos e selecione um Gestor.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Verifica se é novo ou edição
-            int.TryParse(txtIdGestor.Text, out int id);
-            Utilizador existente = SessaoAtual.TodosUtilizadores.FirstOrDefault(u => u.Id == id);
+            var gestorSelecionado = (KeyValuePair<int, string>)cbGestorProg.SelectedItem;
+            int gestorId = gestorSelecionado.Key;
 
-            if (existente == null)
+            int novoId = 1;
+            while (idsUsados.Contains(novoId)) { novoId++; }
+            idsUsados.Add(novoId);
+
+            lstListaGestores.Items.Add($"ID: {novoId}");
+            lstListaGestores.Items.Add($"Nome: {nome}");
+            lstListaGestores.Items.Add($"Username: {username}");
+            lstListaGestores.Items.Add($"Nível de experiência: {nivelexperiencia}");
+            lstListaGestores.Items.Add($"Gestor: {gestorSelecionado.Value}");
+            lstListaGestores.Items.Add("_______________________________________________________");
+            lstListaGestores.Items.Add("");
+
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=iTasksDB;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                if (UsernameExiste(username))
+                string query = "INSERT INTO Utilizadors (Id, Nome, Username, Password, Tipo, Nivel, GestorId) VALUES (@Id, @Nome, @Username, @Password, @Tipo, @Nivel, @GestorId)";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    MessageBox.Show("Username já existe.");
-                    return;
+                    cmd.Parameters.AddWithValue("@Id", novoId);
+                    cmd.Parameters.AddWithValue("@Nome", nome);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@Tipo", (int)TipoUtilizador.Programador);
+                    cmd.Parameters.AddWithValue("@Nivel", nivelexperiencia);
+                    cmd.Parameters.AddWithValue("@GestorId", gestorId);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
                 }
-
-                Utilizador novoUtilizador = new Utilizador
-                {
-                    Id = GerarNovoId(),
-                    Username = username,
-                    Password = txtPasswordGestor.Text,
-                    Nome = txtNomeGestor.Text,
-                    Tipo = "Gestor"
-                };
-
-                SessaoAtual.TodosUtilizadores.Add(novoUtilizador);
-                MessageBox.Show("Utilizador criado com sucesso!");
-            }
-            else
-            {
-                existente.Username = username;
-                existente.Password = txtPasswordGestor.Text;
-                existente.Nome = txtNomeGestor.Text;
-                existente.Tipo = chkGereUtilizadores.Checked ? "Gestor" : "Programador";
-                MessageBox.Show("Utilizador atualizado com sucesso!");
             }
 
-            AtualizarListas();
-            LimparCampos();
-
-        }
-
-        private void lstListaProgramadores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (SessaoAtual.UtilizadorLogado.Tipo != "Gestor")
-            {
-                MessageBox.Show("Apenas gestores podem gravar dados.");
-                return;
-            }
-
-            string username = txtUsernameProg.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(username))
-            {
-                MessageBox.Show("O Username é obrigatório.");
-                return;
-            }
-
-            // Verifica se é novo ou edição
-            int.TryParse(txtIdProg.Text, out int id);
-            Utilizador existente = SessaoAtual.TodosUtilizadores.FirstOrDefault(u => u.Id == id);
-
-            if (existente == null)
-            {
-                if (UsernameExiste(username))
-                {
-                    MessageBox.Show("Username já existe.");
-                    return;
-                }
-
-                Utilizador novoUtilizador = new Utilizador
-                {
-                    Id = GerarNovoId(),
-                    Username = username,
-                    Password = txtPasswordProg.Text,
-                    Nome = txtNomeProg.Text,
-                    Tipo = "Programador"
-                };
-
-                SessaoAtual.TodosUtilizadores.Add(novoUtilizador);
-                MessageBox.Show("Utilizador criado com sucesso!");
-            }
-            else
-            {
-                existente.Username = username;
-                existente.Password = txtPasswordProg.Text;
-                existente.Nome = txtNomeProg.Text;
-                existente.Tipo = "Programador";
-                MessageBox.Show("Utilizador atualizado com sucesso!");
-            }
-
-            AtualizarListas();
-            LimparCampos();
-
+            // Limpa os campos
+            txtIdGestor.Clear();
+            txtNomeGestor.Clear();
+            txtUsernameGestor.Clear();
+            cbDepartamento.SelectedIndex = -1;
+            cbGestorProg.SelectedIndex = -1;
         }
     }
 }
+

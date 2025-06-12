@@ -12,26 +12,49 @@ namespace iTasks
 {
     public partial class frmKanban : Form
     {
-        public frmKanban(string username, string tipo)
+        private Utilizador _utilizador;
+
+        public frmKanban(Utilizador utilizador)
         {
             InitializeComponent();
-            this.username = username;
-            this.tipo = tipo;
-        }
+            _utilizador = utilizador;
 
-        private string username;
-        private string tipo;
+            if (_utilizador.Tipo == TipoUtilizador.Programador)
+            {
+                utilizadoresToolStripMenuItem.Visible = false;
+            }
+        }
 
         private void frmKanban_Load(object sender, EventArgs e)
         {
-            label1.Text = "Bem-vindo(a), " + username + "!" + "(" + tipo + ")";
+            label1.Text = $"Bem-vindo: {Session.NomeUtilizador}";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void gerirUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmGereUtilizadores gereUtilizadores = new frmGereUtilizadores();
-            gereUtilizadores.Show();
+            frmGereUtilizadores frmGereUtilizadores = new frmGereUtilizadores(_utilizador);
+            frmGereUtilizadores.Show();
+        }
+
+        private void gerirTiposDeTarefasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGereTiposTarefas frmGereTiposTarefas = new frmGereTiposTarefas(_utilizador);
+            frmGereTiposTarefas.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

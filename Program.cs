@@ -14,17 +14,25 @@ namespace iTasks
         [STAThread]
         static void Main()
         {
+            using (var db = new ItasksContext())
+            {
+                db.Database.CreateIfNotExists();
+
+                if (!db.Utilizadores.Any())
+                {
+                    var utilizadores = new List<Utilizador>
+                    {
+                        new Utilizador { Username = "gestor", Password = "12345", Tipo = TipoUtilizador.Gestor },
+                        new Utilizador { Username = "programador", Password = "1234", Tipo = TipoUtilizador.Programador }
+                    };
+                    db.Utilizadores.AddRange(utilizadores);
+                    db.SaveChanges();
+                }
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-
-
-            //Criar na base de dados
-            using (var db = new frmGereUtilizadores())
-            {
-
-            }
-
         }
     }
 }

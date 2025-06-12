@@ -8,7 +8,7 @@ namespace iTasks.Models
 {
     class Programador : Utilizador
     {
-        public int NivelExperiencia = 0;
-        public override string ToString() => Nome; // Opcional: define como aparece na ListBox
+        public NivelExperiencia Experiencia { get; set; } // Propriedade específica do Programador
+        public override string ToString() => Nome;
     }
 }

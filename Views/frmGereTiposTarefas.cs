@@ -12,9 +12,17 @@ namespace iTasks
 {
     public partial class frmGereTiposTarefas : Form
     {
-        public frmGereTiposTarefas()
+        private Utilizador _utilizador;
+
+        public frmGereTiposTarefas(Utilizador utilizador)
         {
             InitializeComponent();
+            _utilizador = utilizador;
+        }
+
+        private void frmGereTiposTarefas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
