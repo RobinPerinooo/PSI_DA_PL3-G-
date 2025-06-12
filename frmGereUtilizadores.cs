@@ -33,6 +33,7 @@ namespace iTasks
             // Opcional: seleciona um item por padrão
             cbDepartamento.SelectedIndex = 0;
             CarregarListaGestores();
+            CarregarGestoresParaComboBox();
 
 
         }
@@ -73,6 +74,35 @@ namespace iTasks
             }
         }
 
+        private void CarregarGestoresParaComboBox()
+        {
+            cbGestorProg.Items.Clear();
+
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=iTasksDB;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Id, Nome FROM Utilizadors WHERE Tipo = 1"; // 1 = Gestor
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string nome = reader.IsDBNull(1) ? "Sem Nome" : reader.GetString(1);
+
+                        // Adiciona o par Id-Nome à ComboBox
+                        cbGestorProg.Items.Add(new KeyValuePair<int, string>(id, nome));
+                    }
+                }
+            }
+
+            cbGestorProg.DisplayMember = "Value"; // Mostra o nome do gestor
+            cbGestorProg.ValueMember = "Key";     // Guarda o ID do gestor
+        }
 
         private void btGravarGestor_Click(object sender, EventArgs e)
         {
@@ -87,17 +117,17 @@ namespace iTasks
                 return;
             }
 
-
+           
             int novoId = 1;
             while (idsUsados.Contains(novoId))
             {
                 novoId++;
             }
 
-
+           
             idsUsados.Add(novoId);
 
-
+          
             txtIdGestor.Text = novoId.ToString();
 
 
@@ -144,7 +174,7 @@ namespace iTasks
 
         private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btGravarProg_Click(object sender, EventArgs e)
@@ -203,6 +233,14 @@ namespace iTasks
             txtUsernameGestor.Clear();
             cbDepartamento.SelectedIndex = -1;
             cbGestorProg.SelectedIndex = -1;
+        }
+
+        private void cbGestorProg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbGestorProg.SelectedItem is KeyValuePair<int, string> gestor)
+            {
+                MessageBox.Show($"Gestor selecionado: {gestor.Value}", "Gestor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

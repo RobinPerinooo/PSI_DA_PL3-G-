@@ -21,8 +21,8 @@ namespace iTasks
         private void btLogin_Click(object sender, EventArgs e)
         {
 
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = txtUsername.Text; 
+            string password = txtPassword.Text; 
 
             using (var db = new ItasksContext())
             {

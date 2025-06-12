@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace iTasks
 {
-
+    
     class ItasksContext : DbContext
     {
         public DbSet<Utilizador> Utilizadores { get; set; }

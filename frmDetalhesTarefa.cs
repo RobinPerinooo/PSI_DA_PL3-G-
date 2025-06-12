@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace iTasks
 {
-    public partial class frmRegister: Form
+    public partial class frmDetalhesTarefa : Form
     {
-        public frmRegister()
+        public frmDetalhesTarefa()
         {
             InitializeComponent();
         }

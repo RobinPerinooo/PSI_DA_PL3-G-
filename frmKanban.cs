@@ -12,16 +12,16 @@ namespace iTasks
 {
     public partial class frmKanban : Form
     {
-        private Utilizador _utilizador;
+        private Utilizador _utilizador; 
 
         public frmKanban(Utilizador utilizador)
         {
             InitializeComponent();
-            _utilizador = utilizador;
+            _utilizador = utilizador; 
 
             if (_utilizador.Tipo == TipoUtilizador.Programador)
             {
-                utilizadoresToolStripMenuItem.Visible = false;
+                utilizadoresToolStripMenuItem.Visible = false; 
             }
         }
 

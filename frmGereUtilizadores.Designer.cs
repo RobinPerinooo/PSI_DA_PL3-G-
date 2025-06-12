@@ -270,6 +270,7 @@
             this.cbGestorProg.Name = "cbGestorProg";
             this.cbGestorProg.Size = new System.Drawing.Size(267, 24);
             this.cbGestorProg.TabIndex = 43;
+            this.cbGestorProg.SelectedIndexChanged += new System.EventHandler(this.cbGestorProg_SelectedIndexChanged);
             // 
             // label6
             // 
