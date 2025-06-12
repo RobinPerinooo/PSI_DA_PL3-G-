@@ -43,6 +43,7 @@ namespace iTasks
         private void gerirUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGereUtilizadores frmGereUtilizadores = new frmGereUtilizadores(_utilizador);
+            frmKanban.ActiveForm.Hide();
             frmGereUtilizadores.Show();
         }
 

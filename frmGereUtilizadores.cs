@@ -30,6 +30,12 @@ namespace iTasks
             cbDepartamento.Items.Add("Marketing");
             cbDepartamento.Items.Add("Administração");
 
+            cbNivelProg.Items.Clear();
+            cbNivelProg.Items.Add("Júnior");
+            cbNivelProg.Items.Add("Sênior");
+            cbNivelProg.SelectedIndex = 0; // Opcional: seleciona um por padrão
+
+
             // Opcional: seleciona um item por padrão
             cbDepartamento.SelectedIndex = 0;
             CarregarListaGestores();
@@ -179,12 +185,16 @@ namespace iTasks
 
         private void btGravarProg_Click(object sender, EventArgs e)
         {
-            string nome = txtNomeGestor.Text.Trim();
-            string username = txtUsernameGestor.Text.Trim();
-            string password = txtPasswordGestor.Text.Trim();
+            string nome = txtNomeProg.Text.Trim();
+            string username = txtUsernameProg.Text.Trim();
+            string password = txtPasswordProg.Text.Trim();
             string nivelexperiencia = cbNivelProg.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(nivelexperiencia) || cbGestorProg.SelectedItem == null)
+            if (string.IsNullOrWhiteSpace(nome) ||
+                string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(nivelexperiencia) ||
+                cbGestorProg.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos e selecione um Gestor.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -209,7 +219,8 @@ namespace iTasks
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO Utilizadors (Id, Nome, Username, Password, Tipo, Nivel, GestorId) VALUES (@Id, @Nome, @Username, @Password, @Tipo, @Nivel, @GestorId)";
+                string query = "INSERT INTO Utilizadors (Id, Nome, Username, Password, Tipo, Nivel, GestorId) " +
+                               "VALUES (@Id, @Nome, @Username, @Password, @Tipo, @Nivel, @GestorId)";
 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
@@ -228,13 +239,13 @@ namespace iTasks
             }
 
             // Limpa os campos
-            txtIdGestor.Clear();
-            txtNomeGestor.Clear();
-            txtUsernameGestor.Clear();
-            cbDepartamento.SelectedIndex = -1;
+            txtNomeProg.Clear();
+            txtUsernameProg.Clear();
+            txtPasswordProg.Clear();
+            cbNivelProg.SelectedIndex = -1;
             cbGestorProg.SelectedIndex = -1;
         }
-
+            
         private void cbGestorProg_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbGestorProg.SelectedItem is KeyValuePair<int, string> gestor)

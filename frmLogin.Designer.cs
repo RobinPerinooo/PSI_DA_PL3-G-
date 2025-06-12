@@ -33,6 +33,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
+            this.chbPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +59,7 @@
             this.txtPassword.Location = new System.Drawing.Point(179, 91);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(183, 22);
             this.txtPassword.TabIndex = 3;
             // 
@@ -73,7 +75,7 @@
             // 
             // btLogin
             // 
-            this.btLogin.Location = new System.Drawing.Point(263, 137);
+            this.btLogin.Location = new System.Drawing.Point(262, 161);
             this.btLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(100, 28);
@@ -82,11 +84,23 @@
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // chbPassword
+            // 
+            this.chbPassword.AutoSize = true;
+            this.chbPassword.Location = new System.Drawing.Point(237, 120);
+            this.chbPassword.Name = "chbPassword";
+            this.chbPassword.Size = new System.Drawing.Size(125, 20);
+            this.chbPassword.TabIndex = 5;
+            this.chbPassword.Text = "Show Password";
+            this.chbPassword.UseVisualStyleBackColor = true;
+            this.chbPassword.CheckedChanged += new System.EventHandler(this.chbPassword_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 214);
+            this.Controls.Add(this.chbPassword);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -108,5 +122,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.CheckBox chbPassword;
     }
 }

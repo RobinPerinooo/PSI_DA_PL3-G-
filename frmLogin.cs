@@ -56,5 +56,17 @@ namespace iTasks
         {
 
         }
+
+        private void chbPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbPassword.Checked) 
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '●'; 
+            }
+        }
     }
 }
